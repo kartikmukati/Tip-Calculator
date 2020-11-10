@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/bootstrap.css" >
+
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <center>
+    <div class="container">
+        <div class="row border mt-5">
+            <div class="col">
+                <table class="float-left">
+                    <tr>
+                        <td class="align-top">
+                            <p>Bill</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="bill-amount" type="text" name="bill-amount" id="bill-amount" placeholder="@enter bill amount" onchange="onInputChange()" >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p class="mt-3">Tip %</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number-tip" id='btn-minus-tip' onclick="tipCalculate(this)" disabled data-type="minus" data-field="quant[1]">
+                                        <span class="glyphicon glyphicon-minus">-</span>
+                                    </button>
+                                </span>
+                                <input type="text" name="tip" id="tip" class="form-control input-number" onchange="onInputChange()" value="0" min="0" max="10">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number-tip" id="btn-plus-tip" onclick="tipCalculate(this)" data-type="plus" data-field="quant[1]">
+                                        <span class="glyphicon glyphicon-plus">+</span>
+                                    </button>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p class="mt-3">Number of People</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-btn"></span>
+                                    <button type="button" class="btn btn-default btn-number-people" id="btn-minus-people" onclick="peopleCalculate(this)" disabled data-type="minus" data-field="quant[1]">
+                                        <span class="glyphicon glyphicon-minus">-</span>
+                                    </button>
+                                </span>
+                                <input type="text" name="people" id="people" class="form-control input-number" onchange="onInputChange()" value="0" min="0" max="10">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number-people" id="btn-plus-people" onclick="peopleCalculate(this)" data-type="plus" data-field="quant[1]">
+                                        <span class="glyphicon glyphicon-plus">+</span>
+                                    </button>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col">
+                <table class="float-left">
+                    <tr>
+                        <td class="align-top">
+                            <h3>Tip</h3>
+                            <p>per person</p>
+                        </td>
+                        <td class="align-top">
+                            <h3 id="tip-per-person">$0</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td >
+                            <h3>Total</h3>
+                            <p>per person</p>
+                        </td>
+                        <td >
+                            <h3 id="amount-per-person">$0</h3>
+                        </td>
+                    </tr>
+                    
+                </table>
+
+            </div>
+        </div>
+    </div>
+</center>
+<script src="./js/index.js" ></script>
+</body>
+</html>
