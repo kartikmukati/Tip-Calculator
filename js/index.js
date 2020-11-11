@@ -44,7 +44,7 @@ const getOperation = (event) => {
     } 
     catch (error) 
     {
-        console.log('Can not read property of id undefined');
+        alert('Can not read property of id undefined');
     }
     return id;
 }
@@ -88,7 +88,6 @@ const peopleCalculate = (event) =>
     if (status == true)
     {
         var id = getOperation(event);
-        console.log(id)
 
         if(id == 'btn-plus-people' && tipPercent >= 0) 
         {
